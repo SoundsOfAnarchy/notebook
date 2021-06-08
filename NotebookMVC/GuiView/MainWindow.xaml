@@ -1,0 +1,34 @@
+﻿<Window x:Class="GuiView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuiView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        
+        <DatePicker Name="dateTimePicker" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" SelectedDateChanged="dateTimePicker_SelectedDateChanged"></DatePicker>
+        <ListBox Name="listBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="5"></ListBox>
+        <Button Name="addButton" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="addButton_Click">add</Button>
+        <Button Name="changeButton" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="changeButton_Click">change</Button>
+        <Button Name="removeButton" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="removeButton_Click">remove</Button>
+        <Button Name="findCancelledTasksButton" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="findCancelledTasksButton_Click">find cancelled</Button>
+        <Button Name="findTasksByTextButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="findTasksByTextButton_Click">find by text</Button>
+        <Button Name="findInProgressTasksButton" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="findInProgressTasksButton_Click">find in progress</Button>
+        <Button Name="findCompleteTasksButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="findCompleteTasksButton_Click">find complete</Button>
+        <Button Name="getAllTasksButton" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Margin="5" Click="getAllTasksButton_Click">get all</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="GuiView.ChangeTaskView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuiView"
+        mc:Ignorable="d"
+        Title="ChangeTaskView" Height="300" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="dateTimeLabel" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Date:</Label>
+        <Label Name="spanTimeLabel" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Duration:</Label>
+        <Label Name="completionLabel" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Completion:</Label>
+        <Label Name="textLabel" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Margin="5">Text:</Label>
+        <DatePicker Name="dateTimePicker1" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="5"></DatePicker>
+        <ComboBox Name="minutesComboBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="70, 5, 0, 5"></ComboBox>
+        <ComboBox Name="hourComboBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 5, 70, 5"></ComboBox>
+        <Label Name="hourLabel" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="70, 5, 0, 5">minute:</Label>
+        <Label Name="minuteLabel" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 5, 70, 5">hour:</Label>
+        <TextBox Name="durationTextBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Margin="5">Enter duration(in minutes)</TextBox>
+        <ComboBox Name="completionComboBox" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Margin="5"></ComboBox>
+        <TextBox Name="textTextBox" Grid.Row="5" Grid.Column="1" Margin="5"></TextBox>
+        <Button Name="okButton"  Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="50" Height="20" Margin="5,0,0,5.4" Click="okButton_Click">Ok</Button>
+        <Button Name="cancelButton"  Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="20" Margin="5" Click="cancelButton_Click">Cancel</Button>
+    </Grid>
+</Window>
